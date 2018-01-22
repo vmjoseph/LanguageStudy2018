@@ -15,6 +15,7 @@ main = do
 twostones :: Integer -> String
 twostones n = if n `mod` 2 == 0 then "Bob" else "Alice"
 
+main :: IO ()
 main = do
     n <- readLn
     putStrLn (twostones n)
