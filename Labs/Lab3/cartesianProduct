@@ -1,3 +1,0 @@
-cartProd :: [a]->[b]->[(a,b)]
-cartProd _ [] = []
-cartProd [] _ = []
