@@ -8,5 +8,5 @@ vowels :: [Char]
 vowels = "aeiou"
 
 isVowel :: Char -> Bool
-isVowel c = toLower c `elem` vowels
+isVowel c =  c `elem` vowels
            
