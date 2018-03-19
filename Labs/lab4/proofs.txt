@@ -1,0 +1,23 @@
+--------------------------------------
+Identity Function 
+--------------------------------------
+1. Prove for empty List:
+
+fmap id []          = id []
+use [].fmap.2
+id fmap []          = id []
+use [].fmap.1
+id []               = id []
+
+So we know that it works for the empty list case
+
+2.
+fmap id xs          = id xs
+use [].fmap.2
+id xs: fmap id xs   = id xs
+use id.1
+id xs : fmap id xs  = id xs 
+
+--------------------------------------
+Distributing over Composition
+--------------------------------------
