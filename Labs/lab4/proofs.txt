@@ -1,6 +1,20 @@
 --------------------------------------
 Identity Function 
 --------------------------------------
+- Definitions - 
+Instance Functor [] where
+[].fmap functions
+	1. Fmap _ [] = []
+	2. Fmap g (x:xs) = g x : fmap g xs
+
+    Composition function
+(.) :: (b->c)->(a->b)->(a->c)
+	1. f.g = \x ->f ( g x ) 
+Id function
+Id :: a -> a
+Id x = x
+
+---------------------------------------
 1. Prove for empty List:
 
 fmap id []          = id []
@@ -12,11 +26,14 @@ id []               = id []
 So we know that it works for the empty list case
 
 2.
-fmap id xs          = id xs
+fmap id (x:xs)          = id xs
 use [].fmap.2
-id xs: fmap id xs   = id xs
+id x: fmap id xs   = id xs
 use id.1
-id xs : fmap id xs  = id xs 
+x : fmap id xs     = id xs
+Using inductive hypothesis, this should be able to be applied to this list
+id xs = id xs
+
 
 --------------------------------------
 Distributing over Composition
